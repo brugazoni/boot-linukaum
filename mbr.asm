@@ -13,10 +13,19 @@
     ;; at https://www.gnu.org/licenses/gpl-3.0.txt for further information
 
 	org 0x7c00		; Our load address
+	
+	xor ax, ax
+	mov ds, ax
+	mov es, ax
+	mov fs, ax
+	mov gs, ax
+	jmp init
 
+init:	
 	mov ah, 0xe		; Configure BIOS teletype mode
 
 	mov bx, 0		; May be 0 because org directive.
+
 	mov dx, 0x02	; Used as high value in 0x15 interrupt (wait)
 	mov cx, 0x01	; Used as low value in 0x15 interrupt (wait)
 

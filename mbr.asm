@@ -6,6 +6,12 @@
 	;; based on a template provided by Monaco F. J. <monaco@usp.br>
 	;;
 
+	;; Copyright (c) 2019
+    ;;
+    ;; This is free software and distributed under GNU GPL vr.3. Please 
+    ;; refer to the companion file LICENSING or to the online documentation
+    ;; at https://www.gnu.org/licenses/gpl-3.0.txt for further information
+
 	org 0x7c00		; Our load address
 
 	mov ah, 0xe		; Configure BIOS teletype mode
